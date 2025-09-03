@@ -1,0 +1,22 @@
+.main{
+    width: 100%;
+    background-image: url('/imgs/main_background.png');
+    height: 985px;
+    background-size: cover;
+    background-position: center;
+    padding: 82px 0px;
+}
+.main .container{
+    align-content: end;
+    height: 100%;
+}
+.main__title{
+    font-family: "Next Art";
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: #fdfdfd;
+    text-transform: uppercase;
+    margin-bottom: 41px;
+}

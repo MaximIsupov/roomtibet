@@ -1,3 +1,46 @@
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url('../assets/fonts/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf') format('truetype');
+  font-weight: 100 900; 
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Next Art';
+  src: url('../assets/fonts/NEXT_ART_Regular.otf') format('truetype');
+  font-weight: 400; 
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Next Art';
+  src: url('../assets/fonts/NEXT_ART_SemiBold.otf') format('truetype');
+  font-weight: 500; 
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Next Art';
+  src: url('../assets/fonts/NEXT_ART_Bold.otf') format('truetype');
+  font-weight: 600; 
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Next Art';
+  src: url('../assets/fonts/NEXT_ART_Heavy.otf') format('truetype');
+  font-weight: 700; 
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Next Art';
+  src: url('../assets/fonts/NEXT_ART_Light.otf') format('truetype');
+  font-weight: 300; 
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -19,9 +62,14 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Nunito Sans';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.container{
+  width: 1180px;
+  margin: auto;
 }
 
 * {
