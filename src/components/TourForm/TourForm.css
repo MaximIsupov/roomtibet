@@ -11,7 +11,23 @@
     flex-shrink: 0;
     width: calc((100% - 285px) / 3);
 }
+.tour-form .hidden{
+    display: none;
+}
 .tour-form > button{
     width: 213px;
     height: 52px;;
+    border-radius: 4px;
+    background-color: #FDFDFD;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 125%;
+    letter-spacing: 0.01em;
+    color: #1a3e3e;
+    cursor: pointer;
+    transition: all 0.15s linear;
+    border: none;
+}
+.tour-form > button:hover{
+    transform: scale(0.99);
 }

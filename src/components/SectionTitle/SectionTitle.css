@@ -1,0 +1,17 @@
+.section-title.centered{
+    text-align: center;
+}
+.section-title__subtitle{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 83%;
+    color: #f2be22;
+    margin-bottom: 8px;
+}
+.section-title__title{
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 120%;
+    color: #18121e;
+    margin-bottom: 40px;
+}
