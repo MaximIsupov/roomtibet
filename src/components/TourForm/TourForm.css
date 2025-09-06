@@ -6,6 +6,8 @@
     display: flex;
     column-gap: 24px;
     border-radius: 10px;
+    position: relative;
+    z-index: 1;
 }
 .tour-form > *{
     flex-shrink: 0;

@@ -1,0 +1,119 @@
+.date-select__wrapper{
+    width: 100%;
+    height: 52px;
+    border: 1px solid #e1e3e4;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    color: #fdfdfd;
+    align-content: center;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    background-color: transparent;
+    filter: brightness(1.0);
+}
+.date-select__wrapper:hover{
+    filter: brightness(1.5) drop-shadow(1px 1px 8px black);
+}
+.date-select__wrapper span{
+    padding: 14px 44px 14px 16px;
+}
+
+.date-select__wrapper svg{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    right: 22px;
+}
+.date-select__hint{
+    margin-top: 8px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #fdfdfd;
+}
+
+.calendar-modal__content{
+    position: absolute;
+    background: white;
+    border-radius: 20px;
+    padding: 20px 20px 40px 20px;
+    backdrop-filter: blur(6px);
+    background: rgba(26, 62, 62, 0.9);
+    z-index: 15000000;
+    color: #1a3e3e;
+    width: 600px;
+}
+.calendar__grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 1);
+    overflow: hidden;
+    border-radius: 15px;
+}
+.calendar__grid > *{
+    width: calc(100% / 7);
+    aspect-ratio: 2/1;
+    height: auto;
+    border: none;
+    text-align: center;
+    align-content: center;
+    cursor: pointer;
+        background: transparent;
+}
+.calendar__grid > .calendar__dow{
+    font-weight: 600;
+    color: #1a3e3e;
+}
+.calendar__grid > .calendar__dow:last-child{
+    border-right: 1px solid white;
+}
+.calendar__day{
+    transition: all 0.2s linear;
+}
+.calendar-modal__close{
+    color: #fff;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    position: absolute;
+    top: 16px;
+    right: 21px;
+}
+
+.calendar__header{
+    display: flex;
+    column-gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+    align-items: center;
+    color: white;
+}
+.calendar__header > div{
+    color: #1a3e3e;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    padding-bottom: 3px;
+    padding-right: 1px;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: normal;
+    transition: all .2s linear;
+    display: flex
+;
+    background: white;
+}
+.calendar__header > div:hover{
+    transform: scale(0.94);
+}

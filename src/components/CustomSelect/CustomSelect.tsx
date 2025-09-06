@@ -45,7 +45,7 @@ function CustomSelect({className, placeholder, hint, id, options}: CustomSelectP
                 <ul>
                     { 
                         options.map( option => (
-                            <li data-option={option.value} onClick={updateSelectInfo}>{option.label}</li>
+                            <li data-option={option.value} onClick={updateSelectInfo} key={option.value}>{option.label}</li>
                         ) ) 
                     }
                 </ul>

@@ -1,5 +1,6 @@
 import "./TourForm.css"
 import CustomSelect from "../CustomSelect/CustomSelect";
+import DateIntervalSelect from "../DateIntervalSelect/DateIntervalSelect";
 import { locationOptions, participantsOptions } from "./consts"
 
 
@@ -15,7 +16,7 @@ function TourForm() {
                 id="tour-form__location"
                 options={locationOptions}
             />
-            <input type="number" name="participants" id="tour-form__participants" ></input>
+            <DateIntervalSelect />
             <CustomSelect 
                 className="tour-form__location custom-select" 
                 placeholder="Участники" 
