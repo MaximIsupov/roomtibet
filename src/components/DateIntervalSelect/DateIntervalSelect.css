@@ -1,3 +1,6 @@
+.date-select{
+    position: relative;
+}
 .date-select__wrapper{
     width: 100%;
     height: 52px;
@@ -45,6 +48,16 @@
     z-index: 15000000;
     color: #1a3e3e;
     width: 600px;
+    transition: all 0.2s linear;
+    opacity: 1;
+    pointer-events: all;
+    top: 56px;
+}
+.calendar-modal__content.hidden{
+    opacity: 0;
+    transition: all 0.2s linear;
+    pointer-events: none;
+    top: 46px;
 }
 .calendar__grid{
     display: flex;
@@ -63,7 +76,17 @@
     text-align: center;
     align-content: center;
     cursor: pointer;
-        background: transparent;
+    background: transparent;
+    transition: all 0.2s linear;
+        border-radius: 5px;
+}
+.calendar__grid > *.choosen{
+    background: rgba(26, 62, 62, 1);
+    color: white;
+}
+.calendar__grid > *:hover{
+    background: rgba(26, 62, 62, 0.8);
+    color: white;
 }
 .calendar__grid > .calendar__dow{
     font-weight: 600;
@@ -87,13 +110,18 @@
     right: 21px;
 }
 
-.calendar__header{
+.calendar__header,
+.calendar__hint{
     display: flex;
     column-gap: 20px;
     justify-content: center;
     margin-bottom: 20px;
     align-items: center;
     color: white;
+}
+.calendar__hint{
+    font-size: 22px;
+    font-weight: 700;
 }
 .calendar__header > div{
     color: #1a3e3e;

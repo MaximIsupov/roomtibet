@@ -13,7 +13,7 @@
     flex-shrink: 0;
     width: calc((100% - 285px) / 3);
 }
-.tour-form .hidden{
+.tour-form input.hidden{
     display: none;
 }
 .tour-form > button{

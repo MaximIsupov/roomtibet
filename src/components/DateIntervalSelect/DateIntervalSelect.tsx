@@ -3,13 +3,15 @@
 import { useState } from "react";
 import "./DateIntervalSelect.css";
 
-function Calendar({ onSelect }: { onSelect: (date: Date) => void }) {
+function Calendar({ onSelect, firstDate }: { onSelect: (date: Date) => void; firstDate: Date | null }) {
   const today = new Date();
   const [year, setYear] = useState(today.getFullYear());
   const [month, setMonth] = useState(today.getMonth());
 
   const daysInMonth = new Date(year, month + 1, 0).getDate();
   const startDay = new Date(year, month, 1).getDay() || 7;
+
+  const hintText = firstDate ? 'Выберите конечную дату интервала' : 'Выберите первую дату интервала';
 
   const monthNames = [
     "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
@@ -21,6 +23,7 @@ function Calendar({ onSelect }: { onSelect: (date: Date) => void }) {
 
   return (
     <div className="calendar">
+      <div className="calendar__hint">{ hintText }</div>
       <div className="calendar__header">
         <div onClick={prevMonth}>‹</div>
         <span>
@@ -38,13 +41,13 @@ function Calendar({ onSelect }: { onSelect: (date: Date) => void }) {
         {Array.from({ length: daysInMonth }).map((_, i) => {
           const date = new Date(year, month, i + 1);
           return (
-            <button
+            <div
               key={i}
-              className="calendar__day"
+              className={`calendar__day ${firstDate?.getTime() == date.getTime() ? 'choosen' : ''}`}
               onClick={() => onSelect(date)}
             >
               {i + 1}
-            </button>
+            </div>
           );
         })}
       </div>
@@ -54,12 +57,29 @@ function Calendar({ onSelect }: { onSelect: (date: Date) => void }) {
 
 export default function DateIntervalSelect() {
   const [open, setOpen] = useState(false);
-  const [selected, setSelected] = useState<Date | null>(null);
+  const [selectedFirstDate, setSelectedFirstDate] = useState<Date | null>(null);
+  const [selectedSecondDate, setSelectedSecondDate] = useState<Date | null>(null);
+
+  const toggleDateMenu = () => {
+    setSelectedFirstDate(null);
+    setSelectedSecondDate(null);
+    setOpen( open => !open );
+  }
+
+  const selectDate = (date: Date) => {
+    if (selectedFirstDate) {
+      setSelectedSecondDate(date);
+      setOpen( false );
+    }
+    else{
+      setSelectedFirstDate(date)
+    }
+  }
 
   return (
     <div className="date-select">
-      <div className="date-select__wrapper" onClick={() => setOpen(true)}>
-        <span>{selected ? selected.toLocaleDateString() : "Дата похода"}</span>
+      <div className="date-select__wrapper" onClick={toggleDateMenu}>
+        <span>{selectedSecondDate ? selectedFirstDate?.toLocaleDateString() + ' - ' + selectedSecondDate.toLocaleDateString() : "Дата похода"}</span>
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clipPath="url(#clip0_1_196)">
             <path d="M16.3125 18H1.6875C0.75375 18 0 17.2463 0 16.3125V2.8125C0 1.87875 0.75375 1.125 1.6875 1.125H16.3125C17.2463 1.125 18 1.87875 18 2.8125V16.3125C18 17.2463 17.2463 18 16.3125 18ZM1.6875 2.25C1.3725 2.25 1.125 2.4975 1.125 2.8125V16.3125C1.125 16.6275 1.3725 16.875 1.6875 16.875H16.3125C16.6275 16.875 16.875 16.6275 16.875 16.3125V2.8125C16.875 2.4975 16.6275 2.25 16.3125 2.25H1.6875Z" fill="#FDFDFD" />
@@ -73,20 +93,15 @@ export default function DateIntervalSelect() {
         </svg>
       </div>
       <div className="custom-select__hint">укажите диапазон</div>
-
-      {open && (
-        <div className="calendar-modal">
-          <div className="calendar-modal__content">
-            <button className="calendar-modal__close" onClick={() => setOpen(false)}>✕</button>
-            <Calendar
-              onSelect={(date) => {
-                setSelected(date);
-                setOpen(false);
-              }}
-            />
-          </div>
-        </div>
-      )}
+      <div className={`calendar-modal__content ${open ? '' : 'hidden'}`}>
+        <div className="calendar-modal__close" onClick={() => setOpen(false)}>✕</div>
+        <Calendar
+          onSelect={(date) => {
+            selectDate(date);
+          }}
+          firstDate = {selectedFirstDate}
+        />
+      </div>
     </div>
   );
 }
