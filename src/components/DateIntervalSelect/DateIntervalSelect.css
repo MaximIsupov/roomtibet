@@ -80,11 +80,11 @@
     transition: all 0.2s linear;
         border-radius: 5px;
 }
-.calendar__grid > *.choosen{
+.calendar__grid > *.choosen:not(.calendar__dow){
     background: rgba(26, 62, 62, 1);
     color: white;
 }
-.calendar__grid > *:hover{
+.calendar__grid > *:hover:not(.calendar__dow){
     background: rgba(26, 62, 62, 0.8);
     color: white;
 }
