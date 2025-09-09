@@ -1,0 +1,11 @@
+.directions{
+    padding: 80px 100px;
+}
+.directions__list{
+    display: flex;
+    column-gap: 20px;
+    margin-bottom: 50px;
+}
+.directions__list > *{
+    width: calc((100% - 40px) / 3);
+}
