@@ -1,0 +1,14 @@
+.blog{
+    padding: 80px 100px;
+    background-color: #f3f5f4;
+}
+.blog__list{
+    column-gap: 20px;
+    row-gap: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+.blog__list > *{
+    width: calc((100% - 20px) / 2);
+}
