@@ -1,0 +1,206 @@
+.footer__top{
+    background: #1a3e3e;
+    padding-bottom: 80px;
+    color: white;
+    position: relative;
+}
+.footer__top .container{
+    position: relative;
+}
+.footer-form{
+    padding: 40px 100px;
+    box-shadow: 0 0 15px 0 rgba(24, 18, 30, 0.12);
+    background: #fdfdfd;
+    border-radius: 6px;
+    position: absolute;
+    top: -100px;
+    display: flex;
+    column-gap: 64px;
+    color: #18121E;
+}
+.footer-form__info{
+    width: 380px;
+    flex-shrink: 0;
+}
+.footer-form__form{
+    width: calc(100% - 444px);
+}
+.footer-form .section-title__title{
+    font-size: 28px;
+}
+.section-title__subtitle{
+    font-size: 18px;
+}
+.footer-form__form label{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 125%;
+    margin-bottom: 8px;
+}
+.footer-form__input{
+    display: flex;
+    column-gap: 16px;
+    margin-bottom: 8px;
+}
+.footer-form__input input{
+    border-radius: 4px;
+    padding: 0px 16px;
+    height: 44px;
+    background: #f3f5f4;
+    border: none;
+    outline: none;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 143%;
+    width: calc(100% - 256px);
+}
+.footer-form__input button{
+    border-radius: 4px;
+    padding: 0px 4px;
+    width: 240px;
+    height: 44px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 125%;
+    letter-spacing: 0.01em;
+    color: #fdfdfd;
+    background: #1a3e3e;
+    font-family: 'Nunito Sans';
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+.footer-form__input button:hover{
+    transform: scale(0.99);
+}
+.footer-form__hint{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 129%;
+    color: #18121e;
+}
+.footer-form__hint a{
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+}
+
+
+.footer-main{
+    padding-top: 178px;
+    display: flex;
+    column-gap: 20px;
+}
+.footer-main__info{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    color: #fff;
+    width: 480px;
+}
+.footer-main__title{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+    color: #f3f5f4;
+    margin-bottom: 17px;
+}
+.footer-main__contacts{
+    display: flex;
+    column-gap: 24px;
+}
+.footer-main__contacts a{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 129%;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #fff;
+    margin-top: 80px;
+    transition: all 0.2s linear;
+}
+.footer-main__contacts a:hover{
+    color: #f2be22;
+}
+.footer-main__socials{
+    display: flex;
+    column-gap: 18px;
+    align-items: center;
+    margin-top: 32px;
+}
+.footer-main__socials a,
+.footer-main__socials a:hover svg *
+{
+    transition: all 0.15s linear;
+}
+.footer-main__socials a:hover{
+    transform: scale(1.03);
+}
+.footer-main__socials a:hover svg *{
+    fill: #f2be22;
+}
+
+.footer-main__menu a{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 129%;
+    color: #fdfdfd;
+    transition: all 0.2s linear;
+}
+.footer-main__menu ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+.footer-main__menu li{
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+.footer-main__menu a:hover{
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #f2be22;
+}
+.footer-main__menu svg *{
+    transition: all 0.2s linear;
+}
+.footer-main__menu li:hover svg *{
+    fill: #f2be22;
+}
+.footer-main__menu{
+    width: calc((100% - 520px) / 2);
+}
+.footer-main__new{
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 133%;
+    text-transform: lowercase;
+    color: #1a3e3e;
+    border-radius: 4px;
+    padding: 2px 10px;
+    background: #fff;
+}
+
+
+.footer__bottom{
+    background: #18121e;
+    color: #fff;
+}
+.footer__bottom .container{
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0px;
+}
+.footer__copyright{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 129%;
+}
+.footer__policy{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 129%;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+}

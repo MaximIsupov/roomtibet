@@ -7,6 +7,8 @@ import SectionAbout from "@/components/SectionAbout/SectionAbout";
 import SectionDirections from "@/components/SectionDirections/SectionDirections";
 import SectionProgramms from "@/components/SectionProgramms/SectionProgramms";
 import SectionBlog from "@/components/SectionBlog/SectionBlog";
+import SectionGallery from "@/components/SectionGallery/SectionGallery";
+import Footer from "@/components/Footer/Footer";
 
 import { Main } from "next/document";
 
@@ -19,6 +21,8 @@ export default function Home() {
       <SectionProgramms />
       <SectionDirections />
       <SectionBlog />
+      <SectionGallery />
+      <Footer />
     </div>
   );
 }

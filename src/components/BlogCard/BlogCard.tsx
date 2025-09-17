@@ -16,7 +16,7 @@ function BlogCard({imageLink, title, shortDescription, href, postDate}: BlogCard
             </div>
             <div className="blog-card__info">
                 <div className="blog-card__top">
-                    <h3 className="blog-card__title">{ title }</h3>
+                    <h3 className="blog-card__title" data-heading-tag="H3">{ title }</h3>
                     <div className="blog-card__short-description">
                         { shortDescription }
                     </div>
