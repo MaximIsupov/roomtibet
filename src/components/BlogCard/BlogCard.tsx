@@ -1,14 +1,7 @@
 import "./BlogCard.css";
+import { BlogPost } from "@/types/types";
 
-type BlogCardTypes = {
-    imageLink: string,
-    title: string,
-    shortDescription: string,
-    href: string,
-    postDate: string,
-}
-
-function BlogCard({imageLink, title, shortDescription, href, postDate}: BlogCardTypes) {
+function BlogCard({imageLink, title, shortDescription, href, postDate}: BlogPost) {
     return ( 
         <a href={ href } className="blog-card">
             <div className="blog-card__image">

@@ -1,21 +1,9 @@
 import "./DirectionCard.css";
 
-type DirectionCardPropsBase  = {
-    title: string,
-    subtitle: string,
-    imagePath: string,
-    href: string,
-    price?: number,
-    priceCurrency?: '$' | '₽',
-    rating?: number,
-};
+import { DirectionCardProps } from "../../types/types";
 
-type PriceProps =
-  | { price: number; priceCurrency: '$' | '₽' }
-  | { price?: undefined; priceCurrency?: undefined }
-;
 
-type DirectionCardProps = DirectionCardPropsBase  & PriceProps;
+
 
 function DirectionCard({title, subtitle, price, href, priceCurrency, rating, imagePath}: DirectionCardProps) {
     return ( 
