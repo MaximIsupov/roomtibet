@@ -33,3 +33,15 @@
 .tour-form > button:hover{
     transform: scale(0.99);
 }
+
+@media(max-width: 1200px) {
+    .tour-form{
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+    .tour-form > *,
+    .tour-form > button {
+        flex-shrink: 0;
+        width: calc((100% - 24px) / 2);
+    }
+}

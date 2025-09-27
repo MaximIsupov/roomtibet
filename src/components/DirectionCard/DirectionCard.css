@@ -70,3 +70,10 @@
     color: #fdfdfd;
     flex-shrink: 0;
 }
+
+@media(max-width: 1400px) {
+    .direction{
+        aspect-ratio: unset;
+        height: 400px;
+    }
+}

@@ -1,5 +1,5 @@
 .directions{
-    padding: 80px 100px;
+    padding: 80px 0px 100px;
 }
 .directions__list{
     display: flex;
@@ -8,4 +8,15 @@
 }
 .directions__list > *{
     width: calc((100% - 40px) / 3);
+}
+
+@media(max-width: 1400px) {
+    .directions__list > *{
+        width: calc((100% - 20px) / 2);
+    }
+    .directions__list{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        row-gap: 20px;
+    }
 }

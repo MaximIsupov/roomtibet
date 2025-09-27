@@ -145,3 +145,13 @@
 .calendar__header > div:hover{
     transform: scale(0.94);
 }
+
+@media(max-width: 1200px) {
+    .date-select{
+        position: static;
+    }
+    .calendar-modal__content{
+        width: 90%;
+        left: 5%;
+    }
+}

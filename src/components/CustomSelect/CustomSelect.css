@@ -74,3 +74,19 @@
 .custom-select__submenu li:hover{
     opacity: 1;
 }
+
+@media (max-width: 1200px) {
+    .custom-select{
+        position: static;
+    }
+    .custom-select__wrapper{
+        width: 100%;
+    }
+    .custom-select__submenu{
+        width: 100%;
+        left: 0px;
+        right: 0px;
+        z-index: 10;
+    }
+    
+}
