@@ -81,3 +81,15 @@
 .blog-card:hover .blog-card__title{
     color: #1a3e3e;
 }
+
+@media(max-width: 576px){
+    .blog-card{
+        flex-direction: column;
+        row-gap: 20px;
+        height: auto;
+        align-items: baseline;
+    }
+    .blog-card__image{
+        margin: auto;
+    }
+}

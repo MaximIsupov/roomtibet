@@ -1,6 +1,9 @@
+"use client";
+
 import "./Header.css"
 import Nav from "../Nav/Nav"
 import { NavLink } from "@/types/types"
+import { useState } from "react"
 
 function Header() {
 
@@ -31,14 +34,26 @@ function Header() {
         },
     ]
 
+    const [isShownMobNavMenu, setIsShownMobNavMenu] = useState(false);
+
+    const toggleMobNavMenu = () => {
+        setIsShownMobNavMenu( isShownMobNavMenu => !isShownMobNavMenu );
+    }
+
     return ( 
         <header className="header">
             <div className="container">
                 <a href="/" className="header__logo">
                     <img src="/icons/logo.svg" alt="Логотип" />
                 </a>
-                <div className="header__info">
+                <div className={`header__info ${isShownMobNavMenu ? 'active' : ''}`}>
                     <Nav className="nav-header" links={navLinks} />
+                    <span onClick={toggleMobNavMenu}>×</span>
+                </div>
+                <div className="header__menu-toggler" onClick={toggleMobNavMenu}>
+                    <div></div>
+                    <div></div>
+                    <div></div>
                 </div>
             </div>
         </header>

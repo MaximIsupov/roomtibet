@@ -50,3 +50,89 @@
 .nav-header ul li:hover::after{
     max-width: calc(100%);
 }
+
+.header__menu-toggler,
+.header__info > span{
+    display: none;
+}
+
+@media(max-width: 1000px){
+    .header__menu-toggler{
+        display: flex;
+        flex-direction: column;
+        row-gap: 2px;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 6px;
+        border: 1px solid white;
+        align-items: center;
+        transition: all 0.1s linear;
+    }
+    .header__menu-toggler:hover{
+        transform: scale(0.9);
+    }
+    .header__menu-toggler div{
+        width: 15px;
+        height: 2px;
+        background-color: white;
+        border-radius: 5px;
+    }
+    .header__info{
+        position: fixed;
+        width: 400px;
+        max-width: 100vw;
+        height: 100vh;
+        right: 0px;
+        top: 0px;
+        backdrop-filter: blur(6px);
+        z-index: 50;
+        background: rgba(26, 62, 62, .9);
+        padding: 40px 30px;
+        align-items: baseline;
+        padding-right: 60px;
+        transition: all 0.4s ease-in-out;
+        transform: translateX(400px);
+    }
+    .header__info.active{
+        transform: translateX(0);
+    }
+    .header__menu-toggler{
+        position: relative;
+    }
+    .header__info > span{
+        color: white;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.2s linear;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid white;
+        font-weight: 600;
+        font-size: 20px;
+        right: 20px;
+        box-sizing: border-box;
+        padding-bottom: 1px;
+        display: flex;
+    }
+    .header__info > span:hover{
+        transform: scale(0.9);
+    }
+    .nav-header ul {
+        flex-direction: column;
+        row-gap: 20px;
+        align-items: baseline;
+    }
+    .main__title{
+        font-size: 44px;
+        line-height: normal;
+    }
+}
+@media(max-width: 768px){
+    .main__title{
+        font-size: 30px;
+    }
+}

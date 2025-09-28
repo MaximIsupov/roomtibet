@@ -50,3 +50,13 @@
 .video__pause svg *{
     fill: rgb(26, 62, 62);
 }
+
+@media(max-width: 768px){
+    .video{
+        left: 0px;
+        top: 0px;
+        width: 400px;
+        height: auto;
+        max-width: 100%;
+    }
+}

@@ -30,3 +30,18 @@
         row-gap: 40px;
     }
 }
+@media(max-width: 768px){
+    .about__media{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+    .about__top-image{
+        display: none;
+    }
+    .about__media video{
+        width: 100%;
+        height: auto;
+    }
+}

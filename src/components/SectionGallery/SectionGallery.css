@@ -27,3 +27,18 @@
 .gallery__grid > div:hover img{
     transform: scale(1.01);
 }
+
+@media(max-width: 768px){
+    .gallery__grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .gallery__grid > div.big{
+        grid-column: unset;
+        aspect-ratio: 28/25;
+    }
+}
+@media(max-width: 500px){
+    .gallery__grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

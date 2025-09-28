@@ -45,3 +45,14 @@
         width: calc((100% - 24px) / 2);
     }
 }
+@media(max-width: 768px){
+    .tour-form > *,
+    .tour-form > button {
+        width: 100%;
+    }
+}
+@media(max-width: 500px){
+    .tour-form{
+        padding: 20px;
+    }
+}
