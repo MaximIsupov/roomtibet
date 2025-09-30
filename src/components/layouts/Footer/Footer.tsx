@@ -1,6 +1,6 @@
 import './Footer.css';
 
-import SectionTitle from '../SectionTitle/SectionTitle';
+import SectionTitle from '@/components/widgets/SectionTitle/SectionTitle';
 
 function Footer() {
     return ( 

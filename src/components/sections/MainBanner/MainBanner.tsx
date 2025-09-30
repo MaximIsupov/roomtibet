@@ -1,5 +1,5 @@
 import "./MainBanner.css"
-import TourForm from "../TourForm/TourForm";
+import TourForm from "@/components/widgets/TourForm/TourForm";
 
 function MainBanner() {
     return ( 

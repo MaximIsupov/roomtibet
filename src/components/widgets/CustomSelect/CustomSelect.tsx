@@ -2,7 +2,7 @@
 
 import './CustomSelect.css';
 import { useState, useEffect, useRef, MouseEventHandler } from 'react';
-import { CustomSelectOption } from "../../types/types"
+import { CustomSelectOption } from "../../../types/types"
 
 type CustomSelectProps = {
     className: string,
@@ -18,6 +18,8 @@ function CustomSelect({className, placeholder, hint, id, options}: CustomSelectP
     const [visible, setVisible] = useState(false);
     const [selectPlaceholder, setSelectPlaceholder] = useState(placeholder);
 
+    const wrapperRef = useRef<HTMLDivElement>(null);
+
     const toggleSubMenu = () => {
         setVisible (visible => !visible);
     }
@@ -27,10 +29,19 @@ function CustomSelect({className, placeholder, hint, id, options}: CustomSelectP
         setVisible (visible => !visible);
     }
 
+    useEffect(() => {
+        const handleClickOutside = (e: MouseEvent) => {
+        if (wrapperRef.current && !wrapperRef.current.contains(e.target as Node)) {
+            setVisible(false);
+        }
+        };
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, []);
     
 
     return ( 
-        <div className={className} id={id}>
+        <div className={className} id={id} ref={wrapperRef}>
             <div className="custom-select__wrapper" onClick={toggleSubMenu} data-value={selectPlaceholder}>
                 <span>{selectPlaceholder}</span>
                 <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,8 +1,8 @@
-import SectionTitle from "../SectionTitle/SectionTitle";
-import ButtonLink from "../ButtonLink/ButtonLink";
-import BlogCard from "../BlogCard/BlogCard";
+import SectionTitle from "@/components/widgets/SectionTitle/SectionTitle";
+import ButtonLink from "@/components/widgets/ButtonLink/ButtonLink";
+import BlogCard from "@/components/widgets/BlogCard/BlogCard";
 
-import { blogPosts } from "../../data/Blog";
+import { blogPosts } from "@/data/Blog";
 import './SectionBlog.css';
 
 function SectionBlog() {

@@ -1,14 +1,14 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 
-import Header from "@/components/Header/Header";
-import MainBanner from "@/components/MainBanner/MainBanner";
-import SectionAbout from "@/components/SectionAbout/SectionAbout";
-import SectionDirections from "@/components/SectionDirections/SectionDirections";
-import SectionProgramms from "@/components/SectionProgramms/SectionProgramms";
-import SectionBlog from "@/components/SectionBlog/SectionBlog";
-import SectionGallery from "@/components/SectionGallery/SectionGallery";
-import Footer from "@/components/Footer/Footer";
+import Header from "@/components/layouts/Header/Header";
+import MainBanner from "@/components/sections/MainBanner/MainBanner";
+import SectionAbout from "@/components/sections/SectionAbout/SectionAbout";
+import SectionDirections from "@/components/sections/SectionDirections/SectionDirections";
+import SectionProgramms from "@/components/sections/SectionProgramms/SectionProgramms";
+import SectionBlog from "@/components/sections/SectionBlog/SectionBlog";
+import SectionGallery from "@/components/sections/SectionGallery/SectionGallery";
+import Footer from "@/components/layouts/Footer/Footer";
 
 import { Main } from "next/document";
 

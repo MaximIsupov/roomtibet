@@ -1,9 +1,9 @@
-import SectionTitle from "../SectionTitle/SectionTitle";
-import Advantage from "../Advantage/Advantage";
-import ButtonLink from "../ButtonLink/ButtonLink";
+import SectionTitle from "@/components/widgets/SectionTitle/SectionTitle";
+import Advantage from "@/components/widgets/Advantage/Advantage";
+import ButtonLink from "@/components/widgets/ButtonLink/ButtonLink";
 
 import './SectionProgramms.css';
-import { ProgrammsData } from "../../data/ProgrammsData";
+import { ProgrammsData } from "@/data/ProgrammsData";
 
 function SectionProgramms() {
     return ( 

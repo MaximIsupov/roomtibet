@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { use, useState, useRef, useEffect } from "react";
 import "./DateIntervalSelect.css";
 
 function Calendar({ onSelect, firstDate }: { onSelect: (date: Date) => void; firstDate: Date | null }) {
@@ -60,6 +60,18 @@ export default function DateIntervalSelect() {
   const [selectedFirstDate, setSelectedFirstDate] = useState<Date | null>(null);
   const [selectedSecondDate, setSelectedSecondDate] = useState<Date | null>(null);
 
+  const wrapperRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+      const handleClickOutside = (e: MouseEvent) => {
+        if (wrapperRef.current && !wrapperRef.current.contains(e.target as Node)) {
+          setOpen( false );
+        }
+      };
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   const toggleDateMenu = () => {
     setSelectedFirstDate(null);
     setSelectedSecondDate(null);
@@ -77,7 +89,7 @@ export default function DateIntervalSelect() {
   }
 
   return (
-    <div className="date-select">
+    <div className="date-select 123" ref={wrapperRef}>
       <div className="date-select__wrapper" onClick={toggleDateMenu}>
         <span>{selectedSecondDate ? selectedFirstDate?.toLocaleDateString() + ' - ' + selectedSecondDate.toLocaleDateString() : "Дата похода"}</span>
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,6 +1,6 @@
-import SectionTitle from "../SectionTitle/SectionTitle";
-import ButtonLink from "../ButtonLink/ButtonLink";
-import VideoPlayer from "../VideoPlayer/VideoPlayer";
+import SectionTitle from "@/components/widgets/SectionTitle/SectionTitle";
+import ButtonLink from "@/components/widgets/ButtonLink/ButtonLink";
+import VideoPlayer from "@/components/widgets/VideoPlayer/VideoPlayer";
 import './SectionAbout.css';
 
 

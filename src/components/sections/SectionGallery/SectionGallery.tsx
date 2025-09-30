@@ -1,9 +1,9 @@
-import SectionTitle from '../SectionTitle/SectionTitle';
-import ButtonLink from '../ButtonLink/ButtonLink';
+import SectionTitle from '@/components/widgets/SectionTitle/SectionTitle';
+import ButtonLink from '@/components/widgets/ButtonLink/ButtonLink';
 
 import './SectionGallery.css';
 
-import { galleryImages } from '../../data/GalleryImages';
+import { galleryImages } from '@/data/GalleryImages';
 
 function SectionGallery() {
     return ( 

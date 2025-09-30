@@ -1,9 +1,9 @@
-import SectionTitle from "@/components/SectionTitle/SectionTitle";
-import ButtonLink from "../ButtonLink/ButtonLink";
-import DirectionCard from "../DirectionCard/DirectionCard";
+import SectionTitle from "@/components/widgets/SectionTitle/SectionTitle";
+import ButtonLink from "@/components/widgets/ButtonLink/ButtonLink";
+import DirectionCard from "@/components/widgets/DirectionCard/DirectionCard";
 
 
-import { Directions } from "../../data/Directions";
+import { Directions } from "@/data/Directions";
 import './SectionDirections.css';
 
 function SectionDirections() {

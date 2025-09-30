@@ -1,7 +1,7 @@
 "use client";
 
 import "./Header.css"
-import Nav from "../Nav/Nav"
+import Nav from "@/components/widgets/Nav/Nav"
 import { NavLink } from "@/types/types"
 import { useState } from "react"
 
