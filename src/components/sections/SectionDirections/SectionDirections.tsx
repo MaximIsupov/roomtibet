@@ -3,10 +3,15 @@ import ButtonLink from "@/components/widgets/ButtonLink/ButtonLink";
 import DirectionCard from "@/components/widgets/DirectionCard/DirectionCard";
 
 
-import { Directions } from "@/data/Directions";
+import { DirectionCardProps } from "@/types/types";
 import './SectionDirections.css';
 
-function SectionDirections() {
+type SectionDirectionsType = {
+    directions: DirectionCardProps[],
+    isSection?: boolean
+}
+
+function SectionDirections({directions, isSection=true}: SectionDirectionsType) {
     return (  
         <section className="directions">
             <div className="container">
@@ -17,7 +22,7 @@ function SectionDirections() {
                 />
                 <div className="directions__list">
                     {
-                        Directions.map((direction, index) => (
+                        directions.map((direction, index) => (
                             <DirectionCard 
                                 key={index}
                                 imagePath={direction.imagePath}
@@ -27,15 +32,18 @@ function SectionDirections() {
                                 priceCurrency={direction.priceCurrency}
                                 rating={direction.rating}
                                 href={direction.href}
+                                slug={direction.slug}
                             />
                         ))
                     }
                 </div>
-                <ButtonLink 
-                    href="/"
-                    text="Рейтинг направлений"
-                    additionalClasses="centered"
-                />
+                { isSection && 
+                    <ButtonLink 
+                        href="/directions/"
+                        text="Рейтинг направлений"
+                        additionalClasses="centered"
+                    />
+                }
             </div>
         </section>
     );

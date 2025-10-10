@@ -11,15 +11,18 @@ import SectionGallery from "@/components/sections/SectionGallery/SectionGallery"
 import Footer from "@/components/layouts/Footer/Footer";
 
 import { Main } from "next/document";
+import { directions } from "@/data/Directions";
+
+const latestPosts = directions.slice(-3).reverse(); 
 
 export default function Home() {
   return (
     <div className="page">
-      <Header />
+      <Header isMainPage={true} />
       <MainBanner />
       <SectionAbout />
       <SectionProgramms />
-      <SectionDirections />
+      <SectionDirections directions={latestPosts} />
       <SectionBlog />
       <SectionGallery />
       <Footer />

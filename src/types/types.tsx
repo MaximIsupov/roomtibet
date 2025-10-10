@@ -29,6 +29,8 @@ export type DirectionCardProps = {
   rating?: number;
   price?: number;
   priceCurrency?: '$' | '₽';
+  content?: string;
+  slug: string;
 }
 
 export type BlogPost = {
@@ -37,4 +39,7 @@ export type BlogPost = {
     shortDescription: string,
     href: string,
     postDate: string,
+    content?: string;
+    slug: string;
 }
+

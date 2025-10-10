@@ -5,7 +5,11 @@ import Nav from "@/components/widgets/Nav/Nav"
 import { NavLink } from "@/types/types"
 import { useState } from "react"
 
-function Header() {
+type HeaderProps = {
+    isMainPage?: boolean
+}
+
+function Header({isMainPage=false}: HeaderProps) {
 
     const navLinks: NavLink[] = [
         {
@@ -18,7 +22,7 @@ function Header() {
         },
         {
             "name": "Программа тура",
-            "href": "/"
+            "href": "/directions/"
         },
         {
             "name": "Стоимость",
@@ -41,7 +45,7 @@ function Header() {
     }
 
     return ( 
-        <header className="header">
+        <header className={`header${isMainPage ? ' header_main' : ''}`}> 
             <div className="container">
                 <a href="/" className="header__logo">
                     <img src="/icons/logo.svg" alt="Логотип" />

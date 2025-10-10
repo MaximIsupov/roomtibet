@@ -24,6 +24,7 @@ function SectionBlog() {
                                 shortDescription={post.shortDescription}
                                 postDate={post.postDate}
                                 href={post.href}
+                                slug={post.slug}
                             />
                         ))
                     }

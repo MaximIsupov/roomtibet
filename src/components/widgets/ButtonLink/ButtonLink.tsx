@@ -1,5 +1,7 @@
 import './ButtonLink.css';
 
+import Link from "next/link";
+
 type ButtonLinkProps = {
     href: string,
     text: string,
@@ -8,9 +10,9 @@ type ButtonLinkProps = {
 
 function ButtonLink({href, text, additionalClasses}: ButtonLinkProps) {
     return ( 
-        <a href={href} className={`button ${additionalClasses ? additionalClasses : ''}`}>
+        <Link href={href} className={`button ${additionalClasses ? additionalClasses : ''}`}>
             {text}
-        </a>
+        </Link>
     );
 }
 

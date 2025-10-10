@@ -1,8 +1,14 @@
 .header{
+    width: 100%;
+    background: rgba(26, 62, 62, .9);
+    padding: 10px 0px;
+}
+.header.header_main{
     position: absolute;
     top: 0px;
-    width: 100%;
     left: 0px;
+    background: transparent;
+    padding: 0px;
 }
 .header .container{
     display: flex;

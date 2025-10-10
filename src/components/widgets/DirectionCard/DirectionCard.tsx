@@ -1,13 +1,15 @@
 import "./DirectionCard.css";
 
-import { DirectionCardProps } from "../../types/types";
+import { DirectionCardProps } from "@/types/types";
+
+import Link from "next/link";
 
 
 
 
-function DirectionCard({title, subtitle, price, href, priceCurrency, rating, imagePath}: DirectionCardProps) {
+function DirectionCard({title, subtitle, price, href, priceCurrency, rating, imagePath, slug}: DirectionCardProps) {
     return ( 
-        <a href={href} className="direction">
+        <Link href={`/directions/${slug}/`} className="direction">
             <img src={imagePath} alt={title} width="380" height="500" />
             {rating && (
                 <div className="direction__rating">
@@ -34,7 +36,7 @@ function DirectionCard({title, subtitle, price, href, priceCurrency, rating, ima
                     )
                 }
             </div>
-        </a>
+        </Link>
     );
 }
 

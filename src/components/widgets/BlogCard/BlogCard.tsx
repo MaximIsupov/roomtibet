@@ -1,7 +1,7 @@
 import "./BlogCard.css";
 import { BlogPost } from "@/types/types";
 
-function BlogCard({imageLink, title, shortDescription, href, postDate}: BlogPost) {
+function BlogCard({imageLink, title, shortDescription, href, postDate, slug}: BlogPost) {
     return ( 
         <a href={ href } className="blog-card">
             <div className="blog-card__image">
