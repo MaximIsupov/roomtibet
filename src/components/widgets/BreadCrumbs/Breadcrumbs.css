@@ -1,0 +1,19 @@
+.breadcrumbs{
+    display: flex;
+    column-gap: 20px;
+    row-gap: 5px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.breadcrumbs a{
+    display: block;
+    position: relative;
+}
+.breadcrumbs a::after{
+    content: '/';
+    position: absolute;
+    right: -13px;
+}
+.breadcrumbs a:last-child::after{
+    content: none;
+}

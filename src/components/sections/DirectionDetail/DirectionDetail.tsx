@@ -1,6 +1,8 @@
 import { DirectionCardProps } from "@/types/types";
 import './DirectionDetail.css';
 
+import Booking from "@/components/widgets/Booking/Booking";
+
 import PageTitle from "@/components/widgets/PageTitle/PageTitle";
 
 function DirectionDetail(post: DirectionCardProps) {
@@ -24,9 +26,7 @@ function DirectionDetail(post: DirectionCardProps) {
                                 Цена: <span>{post.price}{post.priceCurrency}</span>
                             </div>
                         )}
-                        <div className="direction-page__book">
-                            
-                        </div>
+                        <Booking target={post.title} />
                     </div>
                 </div>
                 {post.content && (
